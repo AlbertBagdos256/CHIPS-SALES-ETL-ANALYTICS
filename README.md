@@ -1,33 +1,34 @@
-# CHIPS-SALES-ETL-ANALYTICS
-End-to-end pipeline that ingests chips sales from **AWS S3**, transforms with **Python (Pandas)** orchestrated by **Apache Airflow**, loads into **Snowflake**, and visualizes KPIs in **Power BI**.
+# 🥔 Chips Sales ETL & Analytics Pipeline  
 
-## Stack
-AWS S3 • Apache Airflow • Python • Snowflake • Power BI
+## 📌 Overview  
+This project demonstrates an **end-to-end ETL pipeline** for chips sales data. The pipeline extracts raw CSV files from **AWS S3**, performs **data cleaning and transformation** using **Python & Apache Airflow**, and loads the processed data into **Snowflake Data Warehouse**. Finally, the data is visualized in **Power BI** dashboards to track key performance indicators (KPIs) and business insights.  
 
-## What It Does
-- Extract CSVs from S3 (batched/daily)
-- Clean + normalize (types, outliers, product catalog)
-- Build warehouse schema (Dims + Fact)
-- Publish Power BI dashboards (MoM, YTD, Top Brands)
+The goal is to replicate a **real-world data engineering workflow**—from ingestion to reporting—ensuring **data quality, scalability, and actionable insights**.  
 
-## Key KPIs
-- Total Sales, Quantity
-- MoM & YoY Trends
-- Top Brands / Products
-- Basket Size, AOV
+---
 
-## Quick Start
-1. `pip install -r requirements.txt`
-2. Configure Airflow connections: `aws_default`, `snowflake_conn`
-3. Create Snowflake schema: `sql/ddl/*.sql`
-4. Trigger DAG: `dags/chips_etl_dag.py`
-5. Connect Power BI to Snowflake (DirectQuery or Import)
+## ⚙️ Tech Stack  
+- ☁️ **AWS S3** – Cloud storage for raw data  
+- 🐍 **Python** – Data transformation & normalization  
+- 🌬️ **Apache Airflow** – Workflow orchestration  
+- ❄️ **Snowflake** – Cloud data warehouse  
+- 📊 **Power BI** – Data visualization & KPI dashboards  
 
-## Warehouse Model
-- `CHIP_DIM(Product_ID, Product_Name, Brand, Package_Size)`
-- `CUSTOMERS_DIM(Customer_ID, Lifestage, Premium_Flag)`
-- `TRANSACTIONS_FACT(Txn_ID, Customer_ID, Product_ID, Qty, Total_Sales, Txn_Date)`
+---
 
-## Screens
-`/powerbi/screenshots/*`
+## 📊 KPIs Tracked  
+- Total Sales Volume  
+- Revenue by Region  
+- Top-Selling Products  
+- Month-over-Month Growth  
+- Average Sales per Customer  
 
+---
+
+## 🔄 Data Flow  
+```mermaid
+flowchart LR
+    A[S3: Raw Chips Sales Data] --> B[Airflow: ETL Orchestration]
+    B --> C[Python: Data Cleaning & Normalization]
+    C --> D[Snowflake: Data Warehouse]
+    D --> E[Power BI: KPI Dashboards & Reports]
