@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyo
+*.pyd
+*.pkl
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+.ipynb_checkpoints/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Airflow
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/logs/
+airflow/unittests.cfg
+*.pid
+
+# AWS / Snowflake credentials
+*.pem
+*.key
+*.json
+*.yaml
+*.yml
+*.ini
+*.cfg
+secrets.env
+credentials/
+config/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.out
+*.err
+
+# Power BI exports
+*.pbix
+*.rdl
+
+# VSCode / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
