@@ -32,12 +32,11 @@ flowchart LR
     B --> C[Python: Data Cleaning & Normalization]
     C --> D[Snowflake: Data Warehouse]
     D --> E[Power BI: KPI Dashboards & Reports]
-
-
+```
+---
 ## 📊 Power BI Reports
 
-- Time series Analysis
 <img width="2806" height="1526" alt="Screenshot 2025-09-15 224843" src="https://github.com/user-attachments/assets/f130d590-11e9-4081-a11b-845c45dc7af5" />
 - Customers segmentation
 <img width="2749" height="1521" alt="Screenshot 2025-09-15 224908" src="https://github.com/user-attachments/assets/939ff078-7b2f-47ad-8874-d5da2e59bb15" />
-
+---
